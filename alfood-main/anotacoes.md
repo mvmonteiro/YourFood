@@ -47,4 +47,13 @@
   - fizemos a variável global http -> reaproveita toda a parte utilizada no link
     - caso precise trocar mais pra frente, é só trocar la na variável que vai mudar em todos
   
-  
+- Melhorar o Layout para o usuários administrador
+  - fizemos toda a estilização de uma navbar para a administração
+  - vamos fazer um layout padrão para todas as paginas relacionadas
+  - fizemos uma rota de layout para a navbar da administração
+
+- Administração dos pratos de cada restaurante
+  - fizemos as rotas para eles
+  - para o tsx -> usamos como base a administração dos restaurantes e adaptamos para os pratos
+  - Formulário para os pratos:
+    - 
