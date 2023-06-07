@@ -3,6 +3,9 @@ import Home from './paginas/Home';
 import VitrineRestaurantes from './paginas/VitrineRestaurantes';
 import Adm from './paginas/Administracao/Restaurantes/Adm';
 import FormularioRestaurante from './paginas/Administracao/Restaurantes/FormularioRestaurante';
+import PaginaBaseAdmin from './paginas/Administracao/PaginaBaseAdmin';
+import AdministracaoPratos from './paginas/Administracao/Pratos/AdministracaoPratos';
+import FormularioPratos from './paginas/Administracao/Pratos/FormularioPratos';
 
 function App() {
 
@@ -10,9 +13,15 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/restaurantes" element={<VitrineRestaurantes />} />
-      <Route path="/admin/restaurantes" element={<Adm />} />
-      <Route path="/admin/restaurantes/novo" element={<FormularioRestaurante />} />
-      <Route path="/admin/restaurantes/:id" element={<FormularioRestaurante />} /> 
+
+      <Route path="/admin" element={<PaginaBaseAdmin />}>
+        <Route path="restaurantes" element={<Adm />} />
+        <Route path="restaurantes/novo" element={<FormularioRestaurante />} />
+        <Route path="restaurantes/:id" element={<FormularioRestaurante />} /> 
+
+        <Route path="pratos" element={<AdministracaoPratos />} /> 
+        <Route path="pratos/novo" element={<FormularioPratos />} /> 
+      </Route>
     </Routes>
   );
 }
